@@ -110,10 +110,10 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('welcome') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('classification_start') }}">Classification</a>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('welcome') }}">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('classification_start') }}">CREDIT CARD APPROVAL PREDICTION</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('association_start') }}">Association</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('association_start') }}">PRODUCT RECOMMENDATION</a></li>
             </ul>
         </div>
     </div>
@@ -162,7 +162,7 @@
                                         </div>
                                         <div class="col-md-6 mb-4">
 
-                                            <select class="select form-control" name="item_select1">
+                                            <select class="select form-control" name="item_select1" id="item_select1" required="required">
                                                 <option value="0"></option>
                                                 <option value="pork">pork</option>
                                                 <option value="sandwich bags">sandwich bags</option>
@@ -313,7 +313,7 @@
 
                                     <div class="d-flex justify-content-end pt-3">
                                         <button type="button" class="btn btn-warning btn-lg ms-2">Clear</button>
-                                        <button type="submit" value="Submit" class="btn btn-warning btn-lg ms-2">
+                                        <button type="submit" value="Submit" class="btn btn-warning btn-lg ms-2" onclick="displaySelection()">
                                             Show Consequent Products
                                         </button>
                                     </div>
