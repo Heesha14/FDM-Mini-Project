@@ -76,9 +76,9 @@ def predict():
             output = 'No Loan'
 
         if prediction == 0 or prediction == 1:
-            result = 'Customer Is Not Eligible for Credit Card'
+            result = 'Customer Is Not Eligible For Credit Card.'
         elif prediction == 2 or prediction == 3:
-            result = 'Customer Is Eligible for Credit Card'
+            result = 'Customer Is Eligible For Credit Card'
 
     return render_template('classification.html', prediction_text='Status : {}'.format(output), prediction_output= 'System Recommendation : {}'.format(result))
 
