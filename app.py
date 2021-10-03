@@ -1,14 +1,15 @@
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-from flask import Flask, request, jsonify, render_template
-import util as util
 import pickle
-import model as md
+
+import matplotlib.pyplot as plt
+from flask import Flask, request, render_template
 from pandas.plotting import parallel_coordinates
+
+import model as md
+import util as util
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
+ruless = pickle.load(open('rules.pkl', 'rb'))
 
 @app.route('/')
 def welcome():
