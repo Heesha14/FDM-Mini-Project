@@ -75,11 +75,11 @@ def predict():
             output = 'No Loan'
 
         if prediction == 0 or prediction == 1:
-            result = 'Customer Is Not Eligible'
+            result = 'Customer Is Not Eligible For Credit Card.'
         elif prediction == 2 or prediction == 3:
-            result = 'Customer Is Eligible'
+            result = 'Customer Is Eligible For Credit Card'
 
-    return render_template('classification.html', prediction_text='Status : {}'.format(output), prediction_output= 'Result : {}'.format(result))
+    return render_template('classification.html', prediction_text='Status : {}'.format(output), prediction_output= 'System Recommendation : {}'.format(result))
 
 
 @app.route("/rule", methods=["GET", "POST"])
