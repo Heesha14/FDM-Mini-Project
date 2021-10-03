@@ -1,8 +1,6 @@
 import pickle
 
-import matplotlib.pyplot as plt
 from flask import Flask, request, render_template
-from pandas.plotting import parallel_coordinates
 
 import model as md
 import util as util
@@ -17,32 +15,11 @@ def welcome():
 
 @app.route('/association')
 def association_start():
-    # rule_list = util.rule_list()
-    # util.networkXplot(rule_list,10)
-    # plt.figure()
-    # plt.figure(figsize=(4, 8))
-    # plt.savefig('static/' + 'plot3.png', dpi=600, edgecolor="#04253a")
-    return render_template('association.html')
-
-@app.route('/associationN')
-def association_startN():
-    coords = util.parallelPlot()
-    # Generate parallel coordinates plot
-    plt.title('Parallel Coordinate Plot')
-    # plt.xlabel("x")
-    # plt.ylabel("y")
-    plt.figure(figsize=(4,8))
-    parallel_coordinates(coords, 'rule')
-    plt.legend([])
-    plt.grid(True)
-    plt.savefig('static/' + 'plot1.png', dpi=600, edgecolor="#04253a")
-    plt.close()
     return render_template('association.html')
 
 @app.route('/classification')
 def classification_start():
     return render_template('classification.html')
-
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
