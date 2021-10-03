@@ -82,8 +82,7 @@ def pattern_analysis():
 
         item_selected = " , ".join([str(item) for item in items_selected])
         listed = util.recommend_product(item_list)
-        rule_list = util.rule_list()
-        util.networkPlotRule(rule_list, len(rule_list),item_list)
+        util.networkPlotRule(item_list)
 
     return render_template('association.html', pattern1=listed,items=item_selected)
 
