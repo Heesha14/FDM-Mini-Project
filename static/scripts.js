@@ -57,3 +57,14 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function displaySelection()
+{
+    var itemss = document.getElementById("item_select1");
+    console.log(itemss)
+    if (itemss == 0) {
+        alert("Please select an item!");
+        return false;
+    }
+        return true;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Classification</title>
+    <title>Association</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
     <!-- Bootstrap Icons-->
@@ -110,10 +110,10 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('welcome') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('classification_start') }}">Classification</a>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('welcome') }}">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('classification_start') }}">CREDIT CARD APPROVAL PREDICTION</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('association_start') }}">Association</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('association_start') }}">PRODUCT RECOMMENDATION</a></li>
             </ul>
         </div>
     </div>
@@ -133,12 +133,21 @@
                 <div class="card card-registration card-registration-2 my-4">
                     <div class="row g-0">
                         <div class="col-xl-6 d-none d-xl-block">
+                            {% if items %}
                             <img
                                     src="{{ url_for('static', filename='plot3.png' ) }} " width="100%" height="1000px"
                                     alt="Parallel Plot for generated rules"
                                     class="img-fluid"
                                     style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
                             />
+                            {% else %}
+                             <img
+                                    src="{{ url_for('static', filename='img.png' ) }} " width="100%" height="1000px"
+                                    alt="Parallel Plot for generated rules"
+                                    class="img-fluid"
+                                    style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
+                            />
+                            {% endif %}
                         </div>
                         <div class="col-xl-6  bg-indigo">
                             <div class="card-body p-md-5 text-white bg-indigo">
@@ -153,7 +162,7 @@
                                         </div>
                                         <div class="col-md-6 mb-4">
 
-                                            <select class="select form-control" name="item_select1">
+                                            <select class="select form-control" name="item_select1" id="item_select1" required="required">
                                                 <option value="0"></option>
                                                 <option value="pork">pork</option>
                                                 <option value="sandwich bags">sandwich bags</option>
@@ -304,7 +313,7 @@
 
                                     <div class="d-flex justify-content-end pt-3">
                                         <button type="button" class="btn btn-warning btn-lg ms-2">Clear</button>
-                                        <button type="submit" value="Submit" class="btn btn-warning btn-lg ms-2">
+                                        <button type="submit" value="Submit" class="btn btn-warning btn-lg ms-2" onclick="displaySelection()">
                                             Show Consequent Products
                                         </button>
                                     </div>
@@ -334,11 +343,11 @@
             </div>
         </div>
     </div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </section>
 
-
 <!-- Footer-->
-<footer class="bg-light py-5">
+<footer class="bg-light py-5 ">
     <div class="container px-4 px-lg-5">
         <div class="small text-center text-muted">Copyright &copy;</div>
     </div>
