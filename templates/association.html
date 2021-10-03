@@ -136,14 +136,14 @@
                             {% if items %}
                             <img
                                     src="{{ url_for('static', filename='plot3.png' ) }} " width="100%" height="1000px"
-                                    alt="Parallel Plot for generated rules"
+                                    alt="NetworkX plot for selected items"
                                     class="img-fluid"
                                     style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
                             />
                             {% else %}
                              <img
-                                    src="{{ url_for('static', filename='img.png' ) }} " width="100%" height="1000px"
-                                    alt="Parallel Plot for generated rules"
+                                    src="{{ url_for('static', filename='wc1.png' ) }} " width="100%" height="1000px"
+                                    alt="Word Count of Unique Items"
                                     class="img-fluid"
                                     style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
                             />
@@ -313,7 +313,7 @@
 
                                     <div class="d-flex justify-content-end pt-3">
                                         <button type="button" class="btn btn-warning btn-lg ms-2">Clear</button>
-                                        <button type="submit" value="Submit" class="btn btn-warning btn-lg ms-2" onclick="displaySelection()">
+                                        <button type="submit" value="Submit" class="btn btn-warning btn-lg ms-2">
                                             Show Consequent Products
                                         </button>
                                     </div>

@@ -16,11 +16,11 @@ def welcome():
 
 @app.route('/association')
 def association_start():
-    rule_list = util.rule_list()
-    util.networkXplot(rule_list,10)
-    plt.figure()
-    plt.figure(figsize=(4, 8))
-    plt.savefig('static/' + 'plot3.png', dpi=600, edgecolor="#04253a")
+    # rule_list = util.rule_list()
+    # util.networkXplot(rule_list,10)
+    # plt.figure()
+    # plt.figure(figsize=(4, 8))
+    # plt.savefig('static/' + 'plot3.png', dpi=600, edgecolor="#04253a")
     return render_template('association.html')
 
 @app.route('/associationN')
