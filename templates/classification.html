@@ -59,7 +59,7 @@
             color: navy-blue;
             text-align: center;
             padding: 10px;
-            font-size: 28px;
+            font-size: 25px;
         }
 
         .text-block {
@@ -72,7 +72,7 @@
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 50px;
-            opacity: 0.7;
+            opacity: 0.9;
         }
 
         section.background {
@@ -80,12 +80,12 @@
             background-repeat: no-repeat;
             background-size: cover;
             border: 2px solid black;
-            opacity: 0.6;
+            opacity: 0.8;
         }
 
         div.transbox {
             margin: 25px;
-            background-color: white;
+            background-color: black;
             border: 1px solid black;
             opacity: 0.8;
         }
@@ -93,7 +93,8 @@
             margin-top: 10px;
             padding-left: 20px;
             padding-right: 20px;
-            color: 2px solid black;
+            color: white;
+
         }
 
         .images{
@@ -101,6 +102,17 @@
             padding-left: 10px;
             padding-right: 10px;
         }
+        .form-label{
+        color: white;
+        font-weight: bold;
+        font-size:20px;
+        }
+
+        .navbar-brand {
+          position: static;
+        }
+
+
     </style>
 </head>
 <body id="page-top">
@@ -121,6 +133,7 @@
         </div>
     </div>
 </nav>
+
 <!-- Masthead-->
 <header class="masthead1">
     <div class="container px-4 px-lg-5 h-100">
@@ -349,7 +362,7 @@
                         src="{{ url_for('static', filename='scatterPlot.png' ) }} " width="50%" height="600px"
                         alt="Parallel Plot for generated rules"
                         class="img-fluid images"
-                        style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; margin-top:50px; padding-right:10px;"
+                        style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; margin-top:50px; padding-right:30px;"
                 />
             </div>
             <div class="text-block">

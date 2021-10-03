@@ -24,8 +24,8 @@ def predict_classification(gender, car, realty, child, income, income_type, educ
     # print('y shape: {}'.format(np.shape(y)))
     x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
     random_model = RandomForestClassifier(n_estimators=100, criterion='entropy', random_state=0)
-    random_model.fit(X_train, y_train)
-    prediction_test = random_model.predict(X=X_test)
+    random_model.fit(x_train, y_train)
+    prediction_test = random_model.predict(X=x_test)
 
     # Accuracy on Test
     print("Training Accuracy is: ", random_model.score(x_train, y_train))

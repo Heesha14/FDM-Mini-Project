@@ -66,20 +66,20 @@ def predict():
 
         print("prediction", prediction)
         if prediction == 0:
-            output = 'Past Dues'
+            output = '1-29 Days Past Dues'
         elif prediction == 1:
-            output = 'More than 30 days Past Dues'
+            output = 'More Than 30 Days Past Dues'
         elif prediction == 2:
             output = 'Paid Off'
         elif prediction == 3:
             output = 'No Loan'
 
         if prediction == 0 or prediction == 1:
-            result = 'Customer is not Eligible'
+            result = 'Customer Is Not Eligible'
         elif prediction == 2 or prediction == 3:
-            result = 'Customer is Eligible'
+            result = 'Customer Is Eligible'
 
-    return render_template('classification.html', prediction_text='Status is {}'.format(output), prediction_output= 'Result is : {}'.format(result))
+    return render_template('classification.html', prediction_text='Status : {}'.format(output), prediction_output= 'Result : {}'.format(result))
 
 
 @app.route("/rule", methods=["GET", "POST"])
