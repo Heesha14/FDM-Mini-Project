@@ -11386,7 +11386,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(25, 121, 255, 0.2) 0%, rgba(25,121,163, 0.2) 100%), url("../static/images/baby.jpg");
+  background: linear-gradient(to bottom, rgba(203, 211, 222, 0.1) 0%, rgba(192, 224, 238, 0.1) 100%), url("../static/images/backg1.png");
   /**background: url("../assets/robot.jpg"); 228,225,223 **/
   background-position: center;
   background-repeat: no-repeat;
@@ -11492,6 +11492,7 @@ header.masthead1 h1, header.masthead1 .h1 {
 
 .gradient-custom {
   background: url("../static/b2.png");
+
   /***** background: #dcdcdc;
   background: -webkit-linear-gradient(to bottom right, rgb(223, 233, 246), rgb(104, 151, 236));
   background: linear-gradient(to bottom right, rgba(223, 233, 246, 1), rgba(104, 151, 236, 1))
@@ -11600,11 +11601,31 @@ header.masthead1 h1, header.masthead1 .h1 {
 
 .table{
     background-repeat: no-repeat;
-    background: url("../static/b1.jpg");
+    /**background: url("../static/b1.jpg");**/
     border: 1px solid black;
-    /**background: linear-gradient(to bottom, rgba(236, 210, 113, 0.4) 0%, rgba(233, 135, 16, 0.3) 100%), url("../static/b3.PNG");
-    background-image: url("../static/b1.jpg");
+    background: linear-gradient(to bottom, rgba(236, 210, 113, 0.4) 0%, rgba(233, 135, 16, 0.3) 100%), url("../static/b1.jpg");
+    /**background-image: url("../static/b1.jpg");
      background: linear-gradient(to bottom, rgba(25, 121, 255, 0.2) 0%, rgba(25,121,163, 0.2) 100%), url("../static/images/baby.jpg");**/
-    height: 600px;
+
+  height: 600px;
     width: 600px;
+}
+
+
+.bg-indigo1 {
+  /**background-color: #4835d4;
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);**/
+  background: rgb(8, 62, 98);
+}
+@media (min-width: 500px) {
+  .card-registration-2 .bg-indigo1 {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .card-registration-2 .bg-indigo1 {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
 }
