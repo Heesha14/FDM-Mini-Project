@@ -14,9 +14,17 @@ model = pickle.load(open('model.pkl', 'rb'))
 def welcome():
     return render_template('welcome.html')
 
-
 @app.route('/association')
 def association_start():
+    rule_list = util.rule_list()
+    util.networkXplot(rule_list,10)
+    plt.figure()
+    plt.figure(figsize=(4, 8))
+    plt.savefig('static/' + 'plot3.png', dpi=600, edgecolor="#04253a")
+    return render_template('association.html')
+
+@app.route('/associationN')
+def association_startN():
     coords = util.parallelPlot()
     # Generate parallel coordinates plot
     plt.title('Parallel Coordinate Plot')
@@ -96,6 +104,8 @@ def pattern_analysis():
 
         item_selected = " , ".join([str(item) for item in items_selected])
         listed = util.recommend_product(item_list)
+        rule_list = util.rule_list()
+        util.networkPlotRule(rule_list, len(rule_list),item_list)
 
     return render_template('association.html', pattern1=listed,items=item_selected)
 
