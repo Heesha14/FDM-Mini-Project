@@ -1,7 +1,7 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: fdm 
+  AZURE_WEBAPP_NAME: fdm-python 
   PYTHON_VERSION: '3.9'              
 
 on:
